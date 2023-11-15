@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shore+Lines:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap">
+    <link href="https://fonts.cdnfonts.com/css/shorelines-script" rel="stylesheet">
+
+    <title>ToneOp Care</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* header section */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icons a img {
+        width: 40px;
+    }
+
+    /* banner section */
+    .banner {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* section 3 */
+    .section {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+
+    /* product section */
+    .container {
+        background-color: #E6F6Fc;
+        padding: 20px;
+    }
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-card {
+        width: calc(45% - 40px);
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .product-card img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .product-details {
+        padding: 20px;
+        width: 50%;
+    }
+
+    .product-details h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: #9ACD32;
+        margin-top: 35px;
+    }
+
+    .buy-button {
+        width: 60%;
+        background-color: #26a9e0;
+        color: white;
+        border: none;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .crossed-price {
+        text-decoration: line-through;
+        color: #999;
+        margin-top: -18px;
+    }
+
+    .now_prize {
+        font-size: 20px;
+        font-weight: boldx;
+        color: #26a9e0;
+        margin-top: -20px;
+        margin-left: 10px;
+    }
+
+    .offer {
+        color: red;
+    }
+
+    /* section 4 */
+    .additional-content {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .text-content {
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .text-content h1 {
+        margin-top: 50px;
+    }
+
+    .image-content img {
+        width: 60%;
+        max-width: 500px;
+        height: auto;
+        margin-right: 0;
+    }
+
+    /* footer section */
+    .footer {
+        background-color: #E6E7E8;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .f-logo {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+
+    /* **************************************************** */
+
+    /* header */
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 120px;
+        }
+
+        .icons a img {
+            width: 30px;
+        }
+    }
+
+    /* banner section */
+    @media (max-width: 768px) {
+        .banner img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 568px) {
+        .banner img {
+            width: 100%;
+        }
+    }
+
+    /* section 3 */
+    .section {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* section 4 */
+    @media (max-width: 768px) {
+        .additional-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-content h1 {
+            margin-top: 30px;
+        }
+
+        .image-content img {
+            width: 40%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    /* footer section */
+    @media (max-width: 768px) {
+        .footer-logo {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer p {
+            font-size: 8px;
+            /* Set the font size to 8px for mobile devices */
+        }
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="https://firebasestorage.googleapis.com/v0/b/toneop-care.appspot.com/o/emailer01.1-09.jpg?alt=media&token=3fc0a404-a5ec-4905-817f-1aa1304fbde8&_gl=1*1r5yoc8*_ga*ODU2Njk4NTY0LjE2NzMxNzQxODA.*_ga_CW55HF8NVT*MTY5OTM2NDY4MC4xOTAuMS4xNjk5MzY0ODAxLjYwLjAuMA"
+                alt="Logo" id="logo">
+            <!-- <span style="color: red;font-size: 25px;">&#0048</span> -->
+        </div>
+        <div class="icons">
+            <a href=""><img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1_Facebook.png?alt=media&token=454499cf-e772-4173-bf93-cc493257030f" alt="Icon 1"></a>
+            <a href=""><img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1_Youtube.png?alt=media&token=271b5fcd-b45a-4878-ba58-4394983386be" alt="Icon 2"></a>
+            <a href=""><img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1_Insta.png?alt=media&token=d2364fb5-01a8-48ad-9eb0-9ef5e7ad94ac" alt="Icon 3"></a>
+            <a href=""><img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1_Whatsapp.png?alt=media&token=f0470d09-62ca-431f-99c2-162ab451b4dd" alt="Icon 4"></a>
+            <a href=""><img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1_Linkdin.png?alt=media&token=4aba089d-6d84-4878-9ba1-c95e4dbbb019" alt="Icon 5"></a>
+        </div>
+    </div>
+
+
+    <!-- banner -->
+    <div class="banner">
+        <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1-02.jpg?alt=media&token=41181b62-5df3-468a-8f7e-6759ef572955" alt="Responsive Image">
+    </div>
+    <!-- banner end -->
+
+
+    <!-- section 1 -->
+    <div class="section">
+        <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1-27.jpg?alt=media&token=366d26c1-5160-4844-b356-c10e980d785c" alt="Image">
+    </div>
+    <!-- section 1 end -->
+
+    <!-- product section -->
+    <div class="container">
+        <div class="product-container">
+            <div class="product-card" style="margin-top: 40px;">
+                <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1-23.png?alt=media&token=1064ccdb-6fc0-454f-9f2c-0971f18412dc" alt="Product 1" style="margin-top: -40px;">
+                <div class="product-details">
+                    <h2 style="color: #9ACD32;">Skin 360</h2>
+                    <p class="cross-price" style="color: #999;margin-top: -18px;margin-left: 15px;">Was <span
+                            class="crossed-price">₹1499</span></p>
+                    <p class="now_prize" style="font-weight: bold;color: #26a9e0;font-family: 'Poppins', sans-serif;">
+                        Now ₹1274</p>
+                    <p style="color: red;margin-top: -15px;margin-left: 20px;"><span class="offer">(15% off)</span></p>
+                    <button class="buy-button">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="product-card" style="margin-top: 40px;">
+                <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1-24.png?alt=media&token=e5560eb7-a52b-4666-8379-e76a4f718e70" alt="Product 2" style="margin-top: -26px;margin-left: -8px;">
+                <div class="product-details">
+                    <h2 style="color: #9ACD32;">Vitamin 360</h2>
+                    <p class="cross-price" style="color: #999;margin-top: -18px;margin-left: 15px;">Was <span
+                            class="crossed-price">₹999</span></p>
+                    <p class="now_prize" style="font-weight: bold;color: #26a9e0;font-family: 'Poppins', sans-serif;">
+                        Now ₹849</p>
+                    <p style="color: red;margin-top: -15px;margin-left: 20px;"><span class="offer">(15% off)</span></p>
+                    <button class="buy-button">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="product-card" style="margin-top: 20px;">
+                <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1-25.png?alt=media&token=ea7e0c8b-7f09-4999-9a74-69bc783b6b17" alt="Product 1" style="margin-top: -20px;margin-left: -20px;">
+                <div class="product-details">
+                    <h2 style="color: #9ACD32;">Bone 360</h2>
+                    <p class="cross-price" style="color: #999;margin-top: -18px;margin-left: 15px;">Was <span
+                            class="crossed-price">₹899</span></p>
+                    <p class="now_prize" style="font-weight: bold;color: #26a9e0;font-family: 'Poppins', sans-serif;">
+                        Now ₹764</p>
+                    <p style="color: red;margin-top: -15px;margin-left: 20px;"><span class="offer">(15% off)</span></p>
+                    <button class="buy-button">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="product-card" style="margin-top: 20px;">
+                <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1-26.png?alt=media&token=f0e39998-29a3-4eb4-8479-224e269e3308" alt="Product 2" style="margin-top: -20px;margin-left: -10px;">
+                <div class="product-details">
+                    <h2 style="color: #9ACD32;">Digest 360</h2>
+                    <p class="cross-price" style="color: #999;margin-top: -18px;margin-left: 15px;">Was <span
+                            class="crossed-price">₹1499</span></p>
+                    <p class="now_prize" style="font-weight: bold;color: #26a9e0;font-family: 'Poppins', sans-serif;">
+                        Now ₹1274</p>
+                    <p style="color: red;margin-top: -15px;margin-left: 20px;"><span class="offer">(15% off)</span></p>
+                    <button class="buy-button">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of product section -->
+
+
+    <!-- section 2 -->
+    <div class="additional-content">
+        <div class="text-content">
+            <div>
+                <h1 style="font-weight: bold;margin-top: 100px;">Don't Wait!</h1>
+                <p style="margin-top: -20px;">
+                    <span class="grab" style="color: #8BC53F;font-size: 35px;">grab your</span>
+                    <span style="color: #26a9e0;font-size: 35px;font-weight: bold;"> 360 Care</span>
+                </p>
+                <p style="font-size: 22px;margin-top: -15px;">
+                    Before <span style="font-weight: bold;font-size: 22px;">It's too late.</span>
+                </p>
+            </div>
+            <div>
+                <p style="font-weight: bold;font-size: 25px;margin-top: 100px;">
+                    <span style="font-size: 25px;font-weight: bold;font-family: 'Audiowide', sans-serif;">TONEOP,</span>
+                    Your <span style="color: #26a9e0;font-family: 'Audiowide', sans-serif;">CARE</span> is Here.
+                </p>
+                <p style="margin-top: -20px;">
+                    <a href="" style="color: #26a9e0;text-decoration: none;font-size: 24px;">www.toneop.care</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="image-content">
+            <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1-21.png?alt=media&token=e4a00938-a573-4fb3-af90-559b35c14106" alt="Additional Image">
+        </div>
+    </div>
+    <!-- end of section -->
+
+
+    <!--Footer section -->
+    <div class="footer">
+        <div class="footer-logo">
+            <div class="f-logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1_High-%20Quality.png?alt=media&token=bd3e8632-95ae-4090-b8ba-7daff263048c" alt="Logo 1" width="80" height="80">
+                <div style="margin-top: 5px; font-weight: bold;">High-Quality<br>Health Supplements</div>
+            </div>
+            <div class="f-logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1_Free%20Shipping.png?alt=media&token=78007428-f71c-4ef2-8039-aaf8ccfef654" alt="Logo 2" width="80" height="80">
+                <div style="margin-top: 5px; font-weight: bold;">Free<br>Shipping</div>
+            </div>
+            <div class="f-logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1_Easy%20%26%20Secure.png?alt=media&token=ce73ec7c-bcf4-4879-920b-f9b6c6281583" alt="Logo 3" width="80" height="80">
+                <div style="margin-top: 5px; font-weight: bold;">Easy & Secure<br>Payments</div>
+            </div>
+            <div class="f-logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/toneop-2b8ee.appspot.com/o/emailer01.1-13.png?alt=media&token=a41c453b-5ab7-467b-8ebb-fc6bf5e30131" alt="Logo 4" width="80" height="80">
+                <div style="margin-top: 5px; font-weight: bold;">Purest<br>of All</div>
+            </div>
+        </div>
+        <p class="footer-desc">Disclaimer: ToneOp Care products are FSSAI-approved and are formulated to support overall
+            well-being. They
+            are not meant to diagnose, treat, cure, or prevent illness. Individual results may vary based on personal
+            factors. Always consult a healthcare professional before incorporating supplements into your routine,
+            especially if you have underlying medical conditions or are pregnant/nursing. Please read product labels and
+            instructions carefully.</p>
+    </div>
+
+    <!-- End of footer section-->
+
+
+</body>
+
+</html>
+<!-- *********************** -->
